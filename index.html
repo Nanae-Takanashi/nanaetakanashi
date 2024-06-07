@@ -9,21 +9,78 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <div>
-        <section class="opening">
-            <div class="name">
+    
+     <section class="opening">
+        <div class="name">
             NANAE TAKANASHI
+        </div>
+
+        <div class="profession">
+            <img src="./images/opening_webd_esigner.png" alt="web desighner" class="web_desighner">
+            <img src="./images/opening_photographer.png" alt="photgrapher" class="photgrapher">
+            <img src="./images/opening_graphic_designer.png" alt="graphic desighner" class="graphic_desighner">
+            <img src="./images/opening_video_creator.png" alt="video creator" class="video_creator">
+        </div>
+
+        <!-- <div class="fix"> -->
+
+           <div class="scrolldown4">
+              <span>Scroll</span>
+           </div>
+
+         <!-- </div> -->
+
+     </section>
+
+     <section class="top">
+        <header>
+            <div class="menu">
+                <ul>
+                    <li>Top</li>
+                    <li>About me</li>
+                    <li>Services</li>
+                    <li>Enquiry</li>
+               </ul>
             </div>
-        </section>
-    </div>
+
+            <div class=top_images>
+                <!-- <img src="./images/top_images.png" alt="top_image"> -->
+                <img src="./images/top_images_high.png" alt="top_image">
+            </div>
+    
+        </header>
+
+        <div class="top_title">
+            <img src="./images/top_title_image.png" alt="top_title">
+        </div>
+
+
+     </section>
+
+    
 
 </body>
 
 <script>
     $(function (){
         $(".name").fadeIn(1000);
-        $(".name").fadeOut(2000);
+        $(".name").fadeOut(1500);
     });
+
+    $(function (){
+        setTimeout (function (){
+            $(".profession").fadeIn(1000);
+            // $(".profession").fadeOut(1500);
+        },3000);
+        });
+
+    $(function (){
+        setTimeout ( function (){
+            $(".scrolldown4").fadeIn(1000);
+        },4000);
+        });
+
+    
 </script>
 
 </html>
