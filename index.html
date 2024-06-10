@@ -10,9 +10,12 @@
 </head>
 <body>
     
-     <section class="opening">
-        <div class="name">
-            NANAE TAKANASHI
+    <section class="opening">
+        <div class="opening_bg">
+
+            <div class="name">
+                NANAE TAKANASHI
+           </div>
         </div>
 
         <div class="profession">
@@ -22,18 +25,17 @@
             <img src="./images/opening_video_creator.png" alt="video creator" class="video_creator">
         </div>
 
-        <!-- <div class="fix"> -->
+      
 
-           <div class="scrolldown4">
-              <span>Scroll</span>
-           </div>
+        <div class="scrolldown4">
+           <span>Scroll</span>
+        </div>
 
-         <!-- </div> -->
-
-     </section>
-
-     <section class="top">
+    </section>
+    
+    <section class="top">
         <header>
+            
             <div class="menu">
                 <ul>
                     <li>Top</li>
@@ -44,7 +46,7 @@
             </div>
 
             <div class=top_images>
-                <!-- <img src="./images/top_images.png" alt="top_image"> -->
+                
                 <img src="./images/top_images_high.png" alt="top_image">
             </div>
     
@@ -55,7 +57,29 @@
         </div>
 
 
-     </section>
+    </section>
+
+    <section class="about_me">
+
+        <div>
+        
+            <div class="profile">
+                <img src="./images/profile_photo.png" alt="profile_photo" class="profile_photo">
+
+                <div class="box_introduction">
+                    <p class="hello">HELLO!</p>
+                    <p class="introduction">My name is Nanae Takanashi, I am a wife/mother of a beautiful little girl. I was born in Japan and have lived in Adelaide since 2016. As I am a small business owner myself, I know how important your business plan is and I know that you spend a lot of time to make your business unique. I believe that my mission is commit to you, as a business owner, to help your business stand out from the crowd through my web design and graphic skills.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+  
+
+    </section>
 
     
 
@@ -65,20 +89,25 @@
     $(function (){
         $(".name").fadeIn(1000);
         $(".name").fadeOut(1500);
+
+        setTimeout(function() {
+            $(".opening_bg").fadeout(1500);
+        }, 1000);
     });
+   
 
     $(function (){
         setTimeout (function (){
             $(".profession").fadeIn(1000);
             // $(".profession").fadeOut(1500);
         },3000);
-        });
+    });
 
     $(function (){
         setTimeout ( function (){
             $(".scrolldown4").fadeIn(1000);
         },4000);
-        });
+    });
 
     
 </script>
