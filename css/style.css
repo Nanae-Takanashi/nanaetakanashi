@@ -23,9 +23,11 @@ body {
 
 
 .opening .name{
-  font-size: calc(100vw / 10.6);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: calc(100vw / 8.9);
   text-wrap: nowrap;
-  font-weight: bold;
   position: absolute;
   top: calc(50% - 0.5em);
   width: 100%;
@@ -42,8 +44,6 @@ body {
 .profession{
   display: none;
   position: absolute;
-  /* top: calc(10%);
-  left: calc(10%); */
   top: 50%;
   left: 5%;
   transform: translateY(-50%);
@@ -67,10 +67,6 @@ body {
 .video_creator{
   width: 76%;
 }
-
-/* .fix{
-  position: fixed;
-} */
 
 .scrolldown4{
   display: none;
@@ -122,12 +118,13 @@ body {
   background:#ffffff;
 }
 
+/* ここからTOP画面 */
+
 .top {
   position: relative;
   width: 100%;
   min-height: 100vh;
   background-attachment: scroll;
-  /* margin-top: 10%; */
 }
 
 header{
@@ -137,30 +134,41 @@ header{
 .menu{
   margin-left: 1%;
   width: 14%;
-  transform: translateY(15%);
   position: fixed;
-  z-index: 9999;
-  top:17%;
+  top:5%;
+  transition: all 0.3s ease 0s;
+  visibility: visible;
+  opacity: 1;
 }
 
-.menu ul{
-  /* border-left: solid #ffffff 1px; */
-  border-left: solid #326b80 1px;
+.menu.hidden{
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+.contents{
+  border-left: solid #ffffff 1px;
   margin-left: 5%;
   padding-left: 10px;
+  color: #ffffff;
 }
+
+.contents.color_changed{
+  color: #326b80;
+  border-left: solid #326b80 1px;
+}
+
 
 .menu li{
   line-height: 1.7;
   margin-left: 3%;
   font-size: 120%;
-  color: #326b80;
 }
 
 .top_images{
   width: 95%;
   padding-left: 13%;
-  /* transform: translateY(-15%); */
 }
 
 .top_title{
@@ -170,8 +178,12 @@ header{
   top: 40%;
 }
 
+
+/* ここからAbout Me */
+
 .about_me{
   margin-top: 10%;
+  background-color: #ffffff;
 }
 
 .profile{
@@ -183,9 +195,6 @@ header{
   width: 50%;
 }
 
-/* .about_me{
-  background-color: #ffffff;
-} */
 
 .box_introduction{
   margin-top: 5%;
@@ -194,8 +203,10 @@ header{
 }
 
 .hello{
-  font-size: calc(100vw / 12);
-  /* font-size: 100%; */
+  font-size: calc(100vw / 11);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  font-style: normal;
   color: #326b80;
   border-left: #326b80 solid 1px;
   padding-left: 3%;
@@ -210,4 +221,49 @@ header{
   padding-left: 3%;
   font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
   line-height: 1.3;
+}
+
+.web_design{
+  width:900px;
+  height: 900px;
+  background-color: #9aaeef;
+  margin: 0 auto;
+}
+
+.photos{
+  width:900px;
+  height: 900px;
+  background-color: #003af8;
+  margin: 0 auto;
+}
+
+
+.graphic_design{
+  width:900px;
+  height: 900px;
+  background-color: #f904f9;
+  margin: 0 auto;
+
+}
+
+.videos{
+  width:900px;
+  height: 900px;
+  background-color: #edf904;
+  margin: 0 auto;
+
+}
+
+.enquiry{
+  width:900px;
+  height: 900px;
+  background-color: #04f97e;
+  margin: 0 auto;
+}
+
+.footer{
+  width:900px;
+  height: 900px;
+  background-color: #f904a7;
+  margin: 0 auto;
 }
