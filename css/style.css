@@ -184,6 +184,8 @@ header{
 .about_me{
   margin-top: 10%;
   background-color: #ffffff;
+  clip-path: url(path);
+  -webkit-clip-path: url(#pathh);
 }
 
 .profile{
