@@ -5,14 +5,15 @@ body {
   radial-gradient(at 100% 0%, #fa9b52, transparent),
   radial-gradient(at 0% 100%, #abafb3, transparent),
   radial-gradient(at 100% 100%, #fa9fde, transparent);
-  
+  width: 100%;
+  height: 100vh;
 }
 
 .opening {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-attachment: scroll;
+  /* background-attachment: scroll; */
 }
 
 .opening_bg{
@@ -225,47 +226,21 @@ header{
   line-height: 1.3;
 }
 
-.web_design{
-  width:900px;
-  height: 900px;
-  background-color: #9aaeef;
-  margin: 0 auto;
+.container{
+  margin-left: 20%;
+  margin-top: 10%;
 }
 
-.photos{
-  width:900px;
-  height: 900px;
-  background-color: #003af8;
-  margin: 0 auto;
+.web_design_logo{
+  width: 32%;
 }
 
-
-.graphic_design{
-  width:900px;
-  height: 900px;
-  background-color: #f904f9;
-  margin: 0 auto;
-
+.sentence{
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+  line-height: 1.3;
+  font-size: calc(100vw / 60);
+  width: 40%;
+  border-left: solid #ffffff 1px;
+  padding-left: 1%;
 }
 
-.videos{
-  width:900px;
-  height: 900px;
-  background-color: #edf904;
-  margin: 0 auto;
-
-}
-
-.enquiry{
-  width:900px;
-  height: 900px;
-  background-color: #04f97e;
-  margin: 0 auto;
-}
-
-.footer{
-  width:900px;
-  height: 900px;
-  background-color: #f904a7;
-  margin: 0 auto;
-}
