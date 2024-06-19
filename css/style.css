@@ -531,7 +531,7 @@ footer{
   radial-gradient(at 20% 100%, #c4cdd5 30%, transparent 60%),
   radial-gradient(at 70% 90%, #f7c2e6 20%, transparent 60%);
   position: relative;
-  margin-top: -20%;
+  /* margin-top: -20%; */
 
 }
 .footer_logo{
