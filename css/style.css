@@ -124,6 +124,19 @@ body {
   background:#ffffff;
 }
 
+.scrolldown4.color_changed{
+  background: #326b80;
+}
+.scrolldown4.color_changed:after{
+  background: #326b80;
+}
+.scrolldown4.color_changed:before{
+  background: #326b80;
+}
+.scrolldown4.color_changed span{
+  color: #326b80;
+}
+
 /* ここからTOP画面 */
 
 .top {
@@ -142,6 +155,7 @@ header{
   position: fixed;
   top:25%;
   display: none;
+  z-index: 9999;
 }
 
 
@@ -478,7 +492,7 @@ header{
 }
 
 .email h3{
-  display: flex;
+  display: inline;
   justify-content: center;
   font-size: 80px;
   background-image: radial-gradient(at 5% 0%, #9aaeef 30%, transparent 60%),
@@ -547,4 +561,22 @@ footer{
   right: 5px;
   bottom: 20px;
   font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+}
+
+.wave-path {
+  /* margin-top: 0.4px; */
+}
+.wave-path02 {
+  position: absolute;
+  transform: rotate(180deg);
+  bottom: -0.4px;
+  width: 100%;
+}
+.services_logo{
+  position: fixed;
+  display: none;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 31%;
 }

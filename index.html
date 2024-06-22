@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nanae Takanashi Portfolio</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,10 +41,10 @@
     <header>
       <div class="menu" id="menu">
         <ul class="contents">
-         <li>Top</li>
-         <li>About me</li>
-         <li>Services</li>
-         <li>Enquiry</li>
+          <li><a href="#top">Top</a></li>
+          <li><a href="#about_me">About me</a></li>
+          <li><a href="#web_design">Services</a></li>
+          <li><a href="#enquiry">Enquiry</a></li>
         </ul>
       </div>
     </header>
@@ -59,7 +59,7 @@
   </section>
 
   <!-- *About Me* -->
-  <section class="about_me">
+  <section class="about_me" id="about_me">
         <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 1131.66">                                 
             <clipPath id="path">
                 <path d="M1366,1131.66c-345.18-69.74-358.25-368.37-683-368.37S371.33,1042.3,0,1131.66V0h1366v1131.66Z"/>
@@ -73,6 +73,9 @@
         <p class="hello">HELLO!</p>
         <p class="introduction">My name is Nanae Takanashi, I am a wife/mother of a beautiful little girl. I was born in Japan and have lived in Adelaide since 2016. As I am a small business owner myself, I know how important your business plan is and I know that you spend a lot of time to make your business unique. I believe that my mission is commit to you, as a business owner, to help your business stand out from the crowd through my web design and graphic skills.</p>
       </div>
+    </div>
+    <div class="wave-path">
+      <img src="./images/wave.svg" alt="">
     </div>
 
   </section>
@@ -101,6 +104,10 @@
         </div>
     </div>
   </section> 
+
+  <div class="services_logo">
+    <img src="./images/services_logo.png" alt="" />
+  </div>
 
  <!-- photos -->
   <section class="photos" id="photos">
@@ -148,12 +155,15 @@
   <section class="last_transition">
     <img src="./images/are_you_interested.png" alt="are_you_interested_logo" class="are_you_interested_logo">
     <div class="box"><span>Let's chat!</span></div>
+    <div class="wave-path02">
+      <img src="./images/wave.svg" alt="" />
+    </div>
   </section>
 
   <!-- enquiry -->
   <section class="enquiry" id="enquiry">
     <div class="email">
-     <h3>Enquiry</h3>
+     <h3><span>Enquiry</span></h3>
      <div class="enquiry_form"><p>Nanae loves chatting with you!
       Tell me about your business plan or the goal you want to achieve. If there are any graphic design needs you would like me to solve, just message me!
       I would like to hear from you!</p>
@@ -208,17 +218,6 @@ $(function () {
       }
     });
 
-
-    // var $pageTop = $(".services_logo");
-    // $(window).scroll(function () {
-    //   if ($(this).scrollTop() > 3840) {
-    //     $pageTop.fadeIn();
-    //   } else {
-    //     $pageTop.fadeOut();
-    //   }
-    // });
-
-
     function adjustFontSize() {
       var $nameElement = $(".name");
       var parentWidth = $nameElement.parent().width();
@@ -235,13 +234,27 @@ $(function () {
     $(function () {
       $(window).scroll(function () {
         var scrollTop = $(this).scrollTop();
+        var windowHeight = $(window).height();
         var aboutMeOffsetTop = $(".about_me").offset().top;
+        var firstTransitionOffsetTop = $(".first_transition").offset().top;
 
         // about_meが画面の上から100pxの位置に来たらクラスを追加
         if (scrollTop + 200 > aboutMeOffsetTop) {
-          $(".contents").addClass("color_changed");
+          $(".contents, .scrolldown4").addClass("color_changed");
         } else {
-          $(".contents").removeClass("color_changed");
+          $(".contents, .scrolldown4").removeClass("color_changed");
+        }
+
+        // first_transitionが画面のトップに来たらクラスを外す
+        if (scrollTop >= firstTransitionOffsetTop) {
+          $(".contents, .scrolldown4").removeClass("color_changed");
+        }
+
+        // first_transitionが画面領域に入ったらservices_logoを表示
+        if (scrollTop + windowHeight >= firstTransitionOffsetTop) {
+          $(".services_logo").fadeIn();
+        } else {
+          $(".services_logo").fadeOut();
         }
       });
     });
